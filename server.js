@@ -13,10 +13,74 @@ app.post('/requisicao', (req, res) => {
     console.log(req.body);  // Aqui é onde o corpo da requisição é mostrado
 
     // Responde com uma mensagem de sucesso
-    res.status(200).send('Corpo da requisição recebido com sucesso');
+        res.status(200).send('Corpo da requisição recebido com sucesso' + res.status);
 });
 
+app.put('/requisicao', (req, res) => {
+    // Exibe o corpo da requisição no console
+    console.log('Corpo da requisição recebido:');
+    console.log(req.body);  // Aqui é onde o corpo da requisição é mostrado
+
+    // Responde com uma mensagem de sucesso
+        res.status(200).send('Corpo da requisição recebido com sucesso' + res.status);
+});
+
+app.get('/requisicao', (req, res) => {
+    // Exibe o corpo da requisição no console
+    console.log('Corpo da requisição recebido:');
+    console.log(req.body);  // Aqui é onde o corpo da requisição é mostrado
+
+    // Responde com uma mensagem de sucesso
+        res.status(200).send('Corpo da requisição recebido com sucesso' + res.status);
+});
+
+app.options('/requisicao', (req, res) => {
+    // Exibe o corpo da requisição no console
+    console.log('Corpo da requisição recebido:');
+    console.log(req.body);  // Aqui é onde o corpo da requisição é mostrado
+
+    // Responde com uma mensagem de sucesso
+        res.status(200).send('Corpo da requisição recebido com sucesso' + res.status);
+});
+
+app.trace('/requisicao', (req, res) => {
+    // Exibe o corpo da requisição no console
+    console.log('Corpo da requisição recebido:');
+    console.log(req.body);  // Aqui é onde o corpo da requisição é mostrado
+
+    // Responde com uma mensagem de sucesso
+    res.status(200).send('Corpo da requisição recebido com sucesso' + req.protocol);
+});
+
+app.patch('/requisicao', (req, res) => {
+    // Exibe o corpo da requisição no console
+    console.log('Corpo da requisição recebido:');
+    console.log(req.body);  // Aqui é onde o corpo da requisição é mostrado
+
+    // Responde com uma mensagem de sucesso
+    res.status(200).send('Corpo da requisição recebido com sucesso' + req.protocol);
+});
+
+app.head('/requisicao', (req, res) => {
+    // Exibe o corpo da requisição no console
+    console.log('Corpo da requisição recebido:');
+    console.log(req.body);  // Aqui é onde o corpo da requisição é mostrado
+
+    // Responde com uma mensagem de sucesso
+    res.status(200).send('Corpo da requisição recebido com sucesso' + req.protocol);
+});
+
+app.delete('/requisicao', (req, res) => {
+    // Exibe o corpo da requisição no console
+    console.log('Corpo da requisição recebido:');
+    console.log(req.body);  // Aqui é onde o corpo da requisição é mostrado
+
+    // Responde com uma mensagem de sucesso
+    res.status(200).send('Corpo da requisição recebido com sucesso' + req.protocol);
+});
+
+
 // Inicia o servidor na porta 3000
-app.listen( 80, () => {
+app.listen( 443, () => {
     console.log('Servidor rodando na porta 3000');
 });
