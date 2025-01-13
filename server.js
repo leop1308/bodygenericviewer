@@ -1,11 +1,11 @@
 const express = require('express');
-//const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const app = express();
 
 //Middleware para processar o corpo da requisição
- /* app.use(bodyParser.json()); // Para requisições com conteúdo JSON
+ app.use(bodyParser.json()); // Para requisições com conteúdo JSON
 app.use(bodyParser.urlencoded({ extended: true })); // Para requisições com conteúdo URL-encoded 
- */
+
 // Rota para capturar o corpo da requisição
 app.post('/requisicao', (req, res) => {
     // Exibe o corpo da requisição no console
