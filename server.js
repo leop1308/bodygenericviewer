@@ -2,10 +2,10 @@ const express = require('express');
 //const bodyParser = require('body-parser');
 const app = express();
 
-// Middleware para processar o corpo da requisição
-/* app.use(bodyParser.json()); // Para requisições com conteúdo JSON
-app.use(bodyParser.urlencoded({ extended: true })); // Para requisições com conteúdo URL-encoded */
-
+//Middleware para processar o corpo da requisição
+ /* app.use(bodyParser.json()); // Para requisições com conteúdo JSON
+app.use(bodyParser.urlencoded({ extended: true })); // Para requisições com conteúdo URL-encoded 
+ */
 // Rota para capturar o corpo da requisição
 app.post('/requisicao', (req, res) => {
     // Exibe o corpo da requisição no console
@@ -15,7 +15,7 @@ app.post('/requisicao', (req, res) => {
     console.log(req); */
 
     // Responde com uma mensagem de sucesso
-    res.status(200).send(req);
+    res.status(200).send("Request Recebido ");
 });
 
 app.put('/requisicao', (req, res) => {
@@ -27,7 +27,7 @@ app.put('/requisicao', (req, res) => {
     console.log(req); */
 
     // Responde com uma mensagem de sucesso
-    res.status(200).send(req);
+    res.status(200).send("Request Recebido ");
 });
 
 app.get('/requisicao', (req, res) => {
@@ -38,7 +38,7 @@ app.get('/requisicao', (req, res) => {
     console.log(req); */
 
     // Responde com uma mensagem de sucesso
-    res.status(200).send(req);
+    res.status(200).send("Request Recebido ");
 });
 
 app.options('/requisicao', (req, res) => {
@@ -49,7 +49,7 @@ app.options('/requisicao', (req, res) => {
     console.log(req);
  */
     // Responde com uma mensagem de sucesso
-    res.status(200).send(req);
+    res.status(200).send("Requesição recebida ");
 });
 
 app.trace('/requisicao', (req, res) => {
@@ -60,7 +60,7 @@ app.trace('/requisicao', (req, res) => {
     console.log(req); */
 
     // Responde com uma mensagem de sucesso
-    res.status(200).send(req);
+    res.status(200).send("Requesição recebida ");
 });
 
 app.patch('/requisicao', (req, res) => {
@@ -71,7 +71,7 @@ app.patch('/requisicao', (req, res) => {
     console.log(req); */
 
     // Responde com uma mensagem de sucesso
-    res.status(200).send(req);
+    res.status(200).send("Requesição recebida ");
 });
 
 app.head('/requisicao', (req, res) => {
@@ -82,7 +82,7 @@ app.head('/requisicao', (req, res) => {
     console.log(req); */
 
     // Responde com uma mensagem de sucesso
-    res.status(200).send(req);
+    res.status(200).send("Requesição recebida ");
 });
 
 app.delete('/requisicao', (req, res) => {
@@ -93,7 +93,7 @@ app.delete('/requisicao', (req, res) => {
     console.log(req); */
 
     // Responde com uma mensagem de sucesso
-    res.status(200).send(req);
+    res.status(200).send("Requesição recebida ");
 
 });
 
