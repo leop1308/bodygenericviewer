@@ -99,6 +99,6 @@ app.delete('/requisicao', (req, res) => {
 
 
 // Inicia o servidor na porta 3000
-app.listen( 443, () => {
+app.listen( 80, () => {
     console.log('Servidor rodando na porta 3000');
 });
