@@ -17,6 +17,6 @@ app.post('/requisicao', (req, res) => {
 });
 
 // Inicia o servidor na porta 3000
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3333, () => {
     console.log('Servidor rodando na porta 3000');
 });
