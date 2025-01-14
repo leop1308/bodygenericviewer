@@ -1,9 +1,18 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
+var express = require('express');
+var bodyParser = require('body-parser');
+var multer = require('multer');
+var upload = multer();
+var app = express();
 
 //Middleware para processar o corpo da requisição
- app.use(bodyParser.json()); // Para requisições com conteúdo JSON
+app.use(bodyParser.json()); // Para requisições com conteúdo JSON
+// for parsing multipart/form-data
+app.use(upload.array()); 
+app.use(express.static('public'));
+app.use(bodyParser.raw());
+app.use(bodyParser.text());
+
+
 app.use(bodyParser.urlencoded({ extended: true })); // Para requisições com conteúdo URL-encoded 
 
 // Rota para capturar o corpo da requisição
